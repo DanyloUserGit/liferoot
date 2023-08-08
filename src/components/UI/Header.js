@@ -1,6 +1,7 @@
 import style from '../../sassModules/Header.module.scss';
 import logo from '../../media/Logo.svg';
 import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 
 
 
@@ -20,15 +21,15 @@ export function Header(props){
             <img src={logo} alt='Trikutnyk' />
         </div>
         <ul className={Menu ? `${style.active} ${style.header__menu}` : `${style.header__menu}`} onClick={(e)=>{setMenu(!Menu)}}>
-                <li><a href="/" className={style.link} onClick={e=>e.stopPropagation()}>LifeRoot.bat</a></li>
-                <li><a href="patches" className={style.link} onClick={e=>e.stopPropagation()}>Patch Notes</a></li>
+                <li><Link to="/" className={style.link} onClick={e=>e.stopPropagation()}>LifeRoot.bat</Link></li>
+                <li><Link to="/patches" className={style.link} onClick={e=>e.stopPropagation()}>Patch Notes</Link></li>
                 {/* <li><a role="button" style={{userSelect:"none"}} onClick={(e)=>{
                     e.stopPropagation();
                     setOpen(!Open);
                 }} className={style.link}>Trikutnyk</a></li> */}
-                <li><a href="Download" className={style.link} onClick={e=>e.stopPropagation()}>Download</a></li>
+                <li><Link to="/Download" className={style.link} onClick={e=>e.stopPropagation()}>Download</Link></li>
         </ul>
-        <a href="support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</a>
+        <a href="/support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</a>
         <div className={Menu ? `${style.active} ${style.burger__menu}` : `${style.burger__menu}`} onClick={(e)=>{setMenu(!Menu)}}>
             <span></span>
             <span></span>

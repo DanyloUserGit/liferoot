@@ -34,11 +34,11 @@ function App() {
     <div className={style.page}>
       <Header/>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='download' element={<Download />} />
-          <Route path='patches' element={<Notes />} />
-          <Route path='support' element={<Support />}/>
-          <Route path='admin' element={<Admin />}>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/download' element={<Download />} />
+          <Route exact path='/patches' element={<Notes />} />
+          <Route exact path='/support' element={<Support />}/>
+          <Route exact path='/admin' element={<Admin />}>
             <Route path='allmembers' element={<Members />}/>
             <Route path='posts' element={<Posts />}/>
           </Route>
