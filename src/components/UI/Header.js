@@ -21,14 +21,14 @@ export function Header(props){
         </div>
         <ul className={Menu ? `${style.active} ${style.header__menu}` : `${style.header__menu}`} onClick={(e)=>{setMenu(!Menu)}}>
                 <li><a href="/" className={style.link} onClick={e=>e.stopPropagation()}>LifeRoot.bat</a></li>
-                <li><a href="/patches" className={style.link} onClick={e=>e.stopPropagation()}>Patch Notes</a></li>
+                <li><a href="patches" className={style.link} onClick={e=>e.stopPropagation()}>Patch Notes</a></li>
                 {/* <li><a role="button" style={{userSelect:"none"}} onClick={(e)=>{
                     e.stopPropagation();
                     setOpen(!Open);
                 }} className={style.link}>Trikutnyk</a></li> */}
-                <li><a href="/Download" className={style.link} onClick={e=>e.stopPropagation()}>Download</a></li>
+                <li><a href="Download" className={style.link} onClick={e=>e.stopPropagation()}>Download</a></li>
         </ul>
-        <a href="/support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</a>
+        <a href="support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</a>
         <div className={Menu ? `${style.active} ${style.burger__menu}` : `${style.burger__menu}`} onClick={(e)=>{setMenu(!Menu)}}>
             <span></span>
             <span></span>
