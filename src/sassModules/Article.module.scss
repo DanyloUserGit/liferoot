@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+.article{
+    display: flex;
+    margin: 10px 0;
+    color: $lightGray;
+}
+.article img{
+    width: 250px;
+    height: auto;
+    background-color: $imagescolor;
+}
+.article ul{
+    margin: 0 10px;
+}
+.moreLink{
+    color: $white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.header{
+    color: $white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+}
+.description{
+    font-size: 14px;
+}
+// @media screen and (max-width:1430px){
+//     .recomendationImage{
+//         width: 100%;
+//     }
+// }

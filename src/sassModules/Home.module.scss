@@ -1,0 +1,50 @@
+@import './variables.scss';
+.page{
+    width: 70%;
+    height: auto;
+    margin: 0% auto;
+    color: $lightGray;
+    font-size: (calc(14px + 2 * ((100vw - 420px) / 860)));
+    font-family:$font;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.gamelogo{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: -33%;
+    left: 2%;
+    z-index: 0;
+}
+.heading{
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+.textList{
+    margin: 10px 0;
+}
+.textList a{
+    color: $lightGray;
+}
+.longText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.textSector{
+    width: 50%;
+    margin: 10px 0;
+}
+.dList{
+    list-style:disc;
+}
+.blue{
+    color: $darkBlue;
+}

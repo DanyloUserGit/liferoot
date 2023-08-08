@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.page{
+    background: linear-gradient(-155deg, $mindark, $maxdark 80%);
+    height: auto;
+    margin:  0;
+    overflow: hidden;
+    font-family:$font;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: $basecolor;
+}
+::-webkit-scrollbar-thumb{border-radius: 15%;background-color:$darkWhite;}

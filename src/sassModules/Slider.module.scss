@@ -1,0 +1,66 @@
+@import './variables.scss';
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    margin: 15% 0;
+}
+.line{
+    display: flex;
+    margin: 0 -100%;
+    width: 100%;
+    height: 100%;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    cursor: pointer;
+
+}
+.preview{
+    width: 100%;
+    height: 100%;
+}
+.text{
+    font-size: 20px;
+    margin: auto;
+}
+.slide{
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: auto 10px;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.indicators{
+    margin: 0 auto;
+    width: 150px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.indicator{
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    border: solid $darkGray 1px;
+    background-color: $darkGray;
+    margin: 0 5px;
+}
+.indicator.active{
+    background-color: $lightBlue;
+}
+// @keyframes slidePage{
+//     0%{
+//         margin: 0 0%; 
+//         overflow: visible;
+//     }
+//     90%{
+//         margin: 0 -100%;
+//         overflow: visible;
+//     }
+//     100%{
+//         overflow: hidden;
+//     }
+// }

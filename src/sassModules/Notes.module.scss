@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+li{
+    list-style: none;
+}
+
+.page{
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+    color: $lightGray;
+    font-size: (calc(14px + 2 * ((100vw - 420px) / 860)));
+    font-family: $font;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.recomendation{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.recomendationImage{
+    background-color: $imagescolor;
+    width: 500px;
+    height: 300px;
+    margin:10px 0;
+}
+.lastNews{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.name{
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
+}
+hr{
+    color: $lightGray;
+    width: 100%;
+}
+
+@media screen and (max-width:1430px){
+    .recomendationImage{
+        width: 100%;
+    }
+}

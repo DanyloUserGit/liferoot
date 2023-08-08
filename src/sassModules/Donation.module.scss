@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+.wrapper{
+    width: 33.3%;
+    height: auto;
+    padding: 20px 0;
+    background-color: $maxdark;
+    border-radius: 5% 5% 20% 20%;
+    border-bottom: 13.5px solid $imagescolor;
+    color: $white;
+    font-family: $font;
+    text-transform: uppercase;
+    text-decoration:dashed;
+    margin: 0 10px;
+}
+.content{
+    text-align: center;
+    font-size: 22px;
+}
+.img{
+    width: 100%;
+    height: auto;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: 10% 0;
+    background-color: $payment;
+    padding: 5%;
+    border-radius: 5%;
+    transition:  0.5s;
+    cursor: pointer;
+}.btn:hover{
+    background-color: #f5dc62;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+@media screen and (max-width: 1115px){
+    .content{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 500px){
+    .wrapper{
+        margin: 10px 0;
+        width: 100%;
+    }
+}

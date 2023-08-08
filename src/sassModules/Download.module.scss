@@ -1,0 +1,74 @@
+@import './variables.scss';
+.page{
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+    color: $lightGray;
+    font-size: (calc(14px + 2 * ((100vw - 420px) / 860)));
+    font-family:$font;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.Textline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.heading{
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+.textSector{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+.textList{
+    margin: 10px 0;
+}
+.textList a{
+    color: $lightGray;
+}
+.longText{
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+.textSector{
+    width: 50%;
+}
+.dList{
+    list-style:disc;
+}
+.btnsGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btnList{
+    margin: 10px 0;
+}
+.btnList li{
+    margin: 30px 0;
+}
+.blue{
+    color: $darkBlue;
+}
+@media screen and (max-width: 967px){
+    .textSector{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1220px){
+    .btnsGroup{
+        flex-direction: column;
+        justify-content: baseline;
+    }
+}

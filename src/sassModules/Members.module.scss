@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+.wrapper{
+    width: 100%;
+    height: auto;
+    font-family: $font;
+}
+.profilecard{
+    display: flex;
+    padding: 20px;
+    margin: 10px 0;
+    color: $white;
+    font-weight: 550;
+    border-top: 2px solid $darkGray;
+    border-bottom: 2px solid $darkGray;
+}
+.profileImg{
+    width: 60px;
+    height: auto;
+    background-color: $lightGray;
+}
+.userName{
+    margin: 0 10px;
+}

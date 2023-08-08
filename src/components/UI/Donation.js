@@ -1,0 +1,52 @@
+import style from './../../sassModules/Donation.module.scss';
+import mono from './../../media/monobank.jpeg';
+import payPal from './../../media/paypal.png';
+import patreon from './../../media/Patreon.png';
+
+export const Donation = (props) => {
+    if(!props.patreon){ return(
+        <div className={style.wrapper} style={props.style}>
+            <div className={style.content}>
+                <span>{props.value} $</span><br/>
+                <span>{props.text}</span>
+            </div>
+            <div className={style.container}>
+                <PaymentButton  value={props.value} handler={props.handler}/>
+                <PaymentButton type="paypal" value={props.value} handler={props.handler}/>
+            </div>
+        </div>
+    );}else{
+        return(
+            <div className={style.wrapper} style={props.style}>
+            <div className={style.content}>
+                <span>{props.text}</span>
+            </div>
+            <div className={style.container}>
+                <PaymentButton type="patreon" handler={props.handler}/>
+            </div>
+        </div>
+        );
+    }
+}
+export const PaymentButton = (props) => {
+        switch(props.type){
+            case "paypal":
+                return(
+                    <div className={style.btn} onClick={props.handler}>
+                        <img src={payPal} className={style.img}/>
+                    </div>
+                );
+            case "patreon":
+                return(
+                    <div className={style.btn} onClick={props.handler}>
+                        <a href='https://kick.com/'><img src={patreon} className={style.img}/></a>
+                    </div>
+                );
+            default:
+                return(
+                    <div className={style.btn} onClick={props.handlerMono}>
+                        <a href='https://send.monobank.ua/jar/9o1sGtveD3'><img src={mono} className={style.img} style={{borderRadius: "5px"}}/></a>
+                    </div>
+                );
+        }
+}

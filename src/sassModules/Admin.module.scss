@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.topNavbar{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: $maxdarkLight;
+}.topNavbar li{
+    margin: 0 10px;
+}.topNavbar a{
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}.topNavbar a:hover::before{
+    content: "";
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    height: 2px;
+    top: 105%;
+}

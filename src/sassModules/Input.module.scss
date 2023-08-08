@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+input, textarea{
+    font-family: $font;
+    border: none;
+    outline: 0.5px solid $basecolor;
+    margin :10px 0;
+}
+input:focus, input:active{
+    outline: none;
+}
+
+.text, .area{
+    display: flex;
+    width: 300px;
+    padding: 10px;
+    color: $white;
+    background-color: $maxdark;
+}
+.area{
+    height: auto;
+    max-width: 600px;
+}
+.file{
+    background-color: $basecolor;
+    padding: 10px;
+    margin: 20px 0;
+    color: $white;
+    cursor: pointer;
+}
+.file button{
+    color: $white;
+}

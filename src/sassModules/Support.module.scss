@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.page{
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+    color: $lightGray;
+    font-size: (calc(14px + 2 * ((100vw - 420px) / 860)));
+    font-family:$font;
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.line{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+@media screen and (max-width: 500px){
+    .line{
+        flex-direction: column;
+        // margin: 0;
+        // padding-left: 30%;
+        justify-content: center;
+    }
+}

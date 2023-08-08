@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.wrapper{
+    margin: 10px auto;
+    font-family: $font;
+}
+.header{
+    color: $white;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+.form{
+    margin: 20px 0;
+    display: none;
+}.form li{
+    margin: 25px 0;
+    // display: none;
+    justify-content: space-between;
+    max-width: 300px;
+}
+.label{
+    color: $white;
+    font-size:14px;
+    padding: 10px 0;
+}

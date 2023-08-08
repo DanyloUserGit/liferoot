@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+.footer{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+.logo__wrapper{
+    padding: 10px 0;
+}
+.logo__wrapper, .footerMenu, .socialmediaMenu, .footer span{
+    margin: 5px auto;
+}
+.footerMenu{
+    position: relative;
+}
+.footerMenu a{
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+.footerMenu span{
+    width: 25px;
+    height: 1px;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    transform: rotateZ(90deg);
+    background-color: $white;
+    transition: all 0.5s;
+    margin: 0 3px;
+}
+.footerMenu span:nth-of-type(1) {
+    left: 23.5%;
+}
+.footerMenu span:nth-of-type(2) {
+    left: 54%;
+}
+.footer span{
+    color: $footerGray;
+}
+.socialmediaMenu a{
+    margin: 0 30px;
+}
+.footer a{
+    text-decoration: none;
+    color: $white;
+}
+
+@media screen and (max-width: 500px){
+    .footer span{
+        font-size:11px;
+    }
+}
