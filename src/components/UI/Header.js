@@ -29,7 +29,7 @@ export function Header(props){
                 }} className={style.link}>Trikutnyk</a></li> */}
                 <li><Link to="/Download" className={style.link} onClick={e=>e.stopPropagation()}>Download</Link></li>
         </ul>
-        <a href="/support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</a>
+        <Link to="/support" className={Menu ? `${style.active} ${style.link} ${style.linkSolo}` : `${style.link} ${style.linkSolo}`}>Support Us</Link>
         <div className={Menu ? `${style.active} ${style.burger__menu}` : `${style.burger__menu}`} onClick={(e)=>{setMenu(!Menu)}}>
             <span></span>
             <span></span>
