@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/liferoot/static/css/main.10bacdc5.css",
+    "main.js": "/liferoot/static/js/main.d86a1994.js",
+    "static/media/liferoot.svg": "/liferoot/static/media/liferoot.52084bad7d8e29b5593acceee4418649.svg",
+    "static/media/bg.svg": "/liferoot/static/media/bg.f35f56d2d2dac26ae404.svg",
+    "static/media/slide_2.png": "/liferoot/static/media/slide_2.91eb43cc3d28bbd7c322.png",
+    "static/media/slide_1.png": "/liferoot/static/media/slide_1.fa58c7db05632f804bb5.png",
+    "static/media/slide_3.png": "/liferoot/static/media/slide_3.2ee53f9c2f9b5f23de8a.png",
+    "static/media/Logo.svg": "/liferoot/static/media/Logo.b3a0bcf11e998b37adcd42620c8b2555.svg",
+    "static/media/paypal.png": "/liferoot/static/media/paypal.48905819c57eb45e643f.png",
+    "static/media/instagram.svg": "/liferoot/static/media/instagram.e2a94980f6c02e5b3044598de7741016.svg",
+    "static/media/tiktok.svg": "/liferoot/static/media/tiktok.529f56e0dd9f9c9c163e1b3024af5e53.svg",
+    "static/media/tg.svg": "/liferoot/static/media/tg.787bede6398c78fbf1ef622dc6ec998d.svg",
+    "index.html": "/liferoot/index.html",
+    "static/media/profile.svg": "/liferoot/static/media/profile.262e595b4c3a9898c70a9bd777875faa.svg",
+    "main.10bacdc5.css.map": "/liferoot/static/css/main.10bacdc5.css.map",
+    "main.d86a1994.js.map": "/liferoot/static/js/main.d86a1994.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10bacdc5.css",
+    "static/js/main.d86a1994.js"
+  ]
+}
