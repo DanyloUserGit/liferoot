@@ -35,10 +35,10 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/download' element={<Download />} />
-          <Route path='/patches' element={<Notes />} />
-          <Route path='/support' element={<Support />}/>
-          <Route path='/admin' element={<Admin />}>
+          <Route path='download' element={<Download />} />
+          <Route path='patches' element={<Notes />} />
+          <Route path='support' element={<Support />}/>
+          <Route path='admin' element={<Admin />}>
             <Route path='allmembers' element={<Members />}/>
             <Route path='posts' element={<Posts />}/>
           </Route>
