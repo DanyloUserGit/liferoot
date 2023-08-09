@@ -15,14 +15,14 @@ export const Posts = () => {
     const [Header,setHeader] = useState("");
 
     //get Posts
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        (async ()=>{
-            const result =  await axios.get(`${requiredAddress}admin/allposts`);
+    // const [data, setData] = useState([]);
+    // useEffect(() => {
+    //     (async ()=>{
+    //         const result =  await axios.get(`${requiredAddress}admin/allposts`);
 
-            setData(result.data);
-        })();
-    }, [])
+    //         setData(result.data);
+    //     })();
+    // }, [])
     
     const addHandler = () => {
         let elements = document.getElementById("form");
@@ -32,7 +32,7 @@ export const Posts = () => {
     return (
         <div className={style.wrapper}>
             <span className={style.header}>All Posts</span>
-            <ul>
+            {/* <ul>
                 {
                     data.map((el)=>{
                         return(
@@ -49,7 +49,7 @@ export const Posts = () => {
                         );
                     })
                 }
-            </ul>
+            </ul> */}
             <span className={style.header}>New posts</span>
             <Button text="+" type="btn" vis={Vis} handler={addHandler}/>
             <form className={style.form} id="form">

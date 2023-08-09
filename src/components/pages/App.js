@@ -6,32 +6,30 @@ import { Footer } from '../UI/Footer.js';
 import { Routes, Route } from 'react-router-dom';
 import { Notes } from './Notes.js';
 import { Admin } from './Admin.js';
-import { Members } from '../UI/Members.js';
 import { Posts } from '../UI/Posts.js';
 import { Http } from '../../http/index.js';
 import { useLocation } from 'react-router-dom';
 import { Support } from './Support.js';
+import{useState, useEffect} from 'react';
+import {Navigate} from 'react-router-dom';
 const http = new Http();
 
 // 5jxeta6gnq
 
 function App() {
   const location = useLocation();
-  window.onload = function () {
-      if(location.pathname === "/admin/allmembers" || location.pathname === "/admin/posts" || location.pathname === "/admin/"){
-        window.location = "/admin";
-      }
-      if(location.pathname === "/admin"){
-        const pass = prompt("password:", "");
-        pass === "" || pass === undefined || pass === null ? window.location = "/" : http.login({password: pass});
-      }
+  const [load, setLoad] = useState(false);
+  useEffect(() => {
+    (()=>{
       if(location.pathname === "/LifeRoot.bat"){
-        window.location = "/";
+        setLoad(true);
       }
-  }
+    })()
+  }, [])
   
   return (
     <div className={style.page}>
+      {load === true ? <Navigate to="/"/> : ""}
       <Header/>
         <Routes>
           <Route exact path='/' element={<Home />} />
@@ -39,8 +37,7 @@ function App() {
           <Route exact path='/patches' element={<Notes />} />
           <Route exact path='/support' element={<Support />}/>
           <Route exact path='/admin' element={<Admin />}>
-            <Route path='allmembers' element={<Members />}/>
-            <Route path='posts' element={<Posts />}/>
+            <Route exact path='posts' element={<Posts />}/>
           </Route>
         </Routes>
       <Footer />
