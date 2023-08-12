@@ -3,7 +3,7 @@ import style from './../../sassModules/Home.module.scss';
 import slide_1 from './../../media/slide_1.png';
 import slide_2 from './../../media/slide_2.png';
 import slide_3 from './../../media/slide_3.png';
-import liferoot from './../../media/liferoot.svg';
+import liferoot from './../../media/liferoot.png';
 
 export const Home = () => {
     return(
