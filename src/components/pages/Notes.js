@@ -6,7 +6,7 @@ import axios from 'axios';
 
 export const Notes = () => {
     const [data, setData] = useState([]);
-    const requiredAddress = "https://trykutnykserver-8fc5c4b665c4.herokuapp.com/";
+    const requiredAddress = "https://trykutnykserver.onrender.com/";
     useEffect(() => {
         (async ()=>{
             const result =  await axios.get(`${requiredAddress}admin/allposts`);

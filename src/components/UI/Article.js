@@ -4,7 +4,7 @@ import { Http } from '../../http';
 const http = new Http();
 
 export const Article = (props) => {
-    const requiredAddress = "https://trykutnykserver-8fc5c4b665c4.herokuapp.com/";
+    const requiredAddress = "https://trykutnykserver.onrender.com/";
     switch (props.type) {
         case 'admin':
             return(

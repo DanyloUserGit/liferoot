@@ -8,21 +8,21 @@ import axios from 'axios';
 const http = new Http();
 
 export const Posts = () => {
-    const requiredAddress = "https://trykutnykserver-8fc5c4b665c4.herokuapp.com/";
+    const requiredAddress = "https://trykutnykserver.onrender.com/";
     let date = new Date();
     date = date.toDateString().replace(/^.{4}/, '');
     const [Vis, setVis] = useState(false);
     const [Header,setHeader] = useState("");
 
     //get Posts
-    // const [data, setData] = useState([]);
-    // useEffect(() => {
-    //     (async ()=>{
-    //         const result =  await axios.get(`${requiredAddress}admin/allposts`);
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        (async ()=>{
+            const result =  await axios.get(`${requiredAddress}admin/allposts`);
 
-    //         setData(result.data);
-    //     })();
-    // }, [])
+            setData(result.data);
+        })();
+    }, [])
     
     const addHandler = () => {
         let elements = document.getElementById("form");
