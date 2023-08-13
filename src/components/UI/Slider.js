@@ -1,5 +1,6 @@
 import style from './../../sassModules/Slider.module.scss';
 import { useState } from 'react';
+import $ from 'jquery';
 
 export function Slider ({children}) {
     const [slide, setSlide] = useState(2);
@@ -16,37 +17,18 @@ export function Slider ({children}) {
             document.getElementById('line').style.margin = `0 -100%`;
             setSlide(2);
         },
-        // slideToMouse: ()=>{
-        //     const line = document.getElementById('line');
-        //     line.addEventListener("mousedown", (event)=>{
-        //         console.log(event.clientX);
-        //         if(event.clientX > 500){
-        //             switch (slide){
-        //                 case 1:
-        //                     slider.slideToCenter();
-        //                     break;
-        //                 case 2:
-        //                     slider.slideToRight();
-        //                     break;
-        //                 default:
-        //                     return "";
-        //             }
-        //         }
-        //         if(event.clientX < 500){
-        //             switch (slide){
-        //                 case 3:
-        //                     slider.slideToCenter();
-        //                     break;
-        //                 case 2:
-        //                     slider.slideToLeft();
-        //                     break;
-        //                 default:
-        //                     return "";
-        //             }
-        //         }
-        //     });
+    }
+    let prevPos
+    $('line').on('mousedown', function (evt) {
+        $(this).on('mousemove', drag)
+        prevPos = {x:evt.clientX, y:evt.clientY}
+    }).on('mouseup mouseout', function() {
+        $(this).off('mousemove', drag)
+    })
 
-        // }
+    function drag(evt) {
+        window.scrollBy(prevPos.x - evt.clientX, prevPos.y - evt.clientY);
+        prevPos = {x:evt.clientX, y:evt.clientY}
     }
     return(
         <div className={style.wrapper}>
