@@ -4,12 +4,16 @@ import slide_1 from './../../media/slide_1.png';
 import slide_2 from './../../media/slide_2.png';
 import slide_3 from './../../media/slide_3.png';
 import liferoot from './../../media/liferoot.png';
+import icon from './../../media/icon.png';
 
 export const Home = () => {
     return(
         <div className={style.page}>
             {/* <span>aaa</span> */}
-            <img src={liferoot} alt="liferoot" className={style.gamelogo}/>
+            <div className={style.gamelogo}>
+                <img src={icon} alt="liferoot"/>
+                <img src={liferoot} alt="liferoot"/>
+            </div>
             <Slider>
                 <Slide data={{
                         name: "Trikytnuk",
