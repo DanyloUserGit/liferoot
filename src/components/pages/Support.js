@@ -44,7 +44,7 @@ export const Support = ({children}) => {
                             setPayment(true);
                             handler(250, "The Best")}} />
                     </div>
-                    <Donation value={100} text="our kick" patreon={true} style={{margin: "0 auto"}}/>
+                    {/* <Donation value={100} text="our kick" patreon={true} style={{margin: "0 auto"}}/> */}
                     <Outlet />
                 </div>
             ); 
