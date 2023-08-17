@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/liferoot/static/css/main.0f16d2b8.css",
-    "main.js": "/liferoot/static/js/main.8b8efd56.js",
+    "main.js": "/liferoot/static/js/main.fa67a04d.js",
     "static/media/bg.svg": "/liferoot/static/media/bg.f35f56d2d2dac26ae404.svg",
     "static/media/liferoot.png": "/liferoot/static/media/liferoot.5f6ff0dd0a61fe8208e9.png",
     "static/media/slide_2.png": "/liferoot/static/media/slide_2.91eb43cc3d28bbd7c322.png",
@@ -14,10 +14,10 @@
     "static/media/tg.svg": "/liferoot/static/media/tg.787bede6398c78fbf1ef622dc6ec998d.svg",
     "index.html": "/liferoot/index.html",
     "main.0f16d2b8.css.map": "/liferoot/static/css/main.0f16d2b8.css.map",
-    "main.8b8efd56.js.map": "/liferoot/static/js/main.8b8efd56.js.map"
+    "main.fa67a04d.js.map": "/liferoot/static/js/main.fa67a04d.js.map"
   },
   "entrypoints": [
     "static/css/main.0f16d2b8.css",
-    "static/js/main.8b8efd56.js"
+    "static/js/main.fa67a04d.js"
   ]
 }
