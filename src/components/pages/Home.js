@@ -11,25 +11,25 @@ export const Home = () => {
             {/* <span>aaa</span> */}
             <img src={liferoot} alt="liferoot" className={style.gamelogo}/>
             <Slider>
-            <Slide data={{
-                    name: "Trikytnuk",
-                    img: slide_1,
-                    // text: "new game 2023"
-                }}/>
-            <Slide data={{
-                    name: "Trikytnuk",
-                    img: slide_2,
-                    // text: "new game 2023"
-                }}/>
-            <Slide data={{
-                    name: "Trikytnuk",
-                    img: slide_3,
-                    // text: "new game 2023"
-                }}/>
+                <Slide data={{
+                        name: "Trikytnuk",
+                        img: slide_2,
+                        // text: "new game 2023"
+                    }}/>
+                <Slide data={{
+                        name: "Trikytnuk",
+                        img: slide_1,
+                        // text: "new game 2023"
+                    }}/>
+                <Slide data={{
+                        name: "Trikytnuk",
+                        img: slide_3,
+                        // text: "new game 2023"
+                    }}/>
             </Slider>
             <div className={style.longText}>
                     <span className={style.heading}>ABOUT GAME</span>
-                    <ul className={`${style.textList} ${style.longText}`}>
+                    <ul className={style.textList}>
                         <li>
                             <span>
                             In this game, you play as a person searching for the meaning of life. To do so, you enter the World Tree of Life, a place where all information is stored as if in a computer. As you dive into the root file system of the tree, you'll feel like a mole, as you navigate through the rabbit holes. To reach the root folder that contains the answers to your questions, you must pass through a defensive system, symbolized by rabbits. In ancient Greek mythology, rabbits represent life and fertility. To make your way through the rabbits, you'll need to use various tools such as the hook, which enables you to move quickly, the dash, which lets you control your flight, the sword, which helps you kill the rabbits, and the pistol, which allows you to kill them at a distance. Between levels, you'll also encounter puzzles that open up access to root directories.

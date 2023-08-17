@@ -25,15 +25,15 @@
 }
 .textList{
     margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .textList a{
     color: $lightGray;
 }
 .longText{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
+    margin:20% 0 ;
 }
 .textSector{
     width: 50%;
