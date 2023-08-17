@@ -11,8 +11,8 @@ export const Home = () => {
         <div className={style.page}>
             {/* <span>aaa</span> */}
             <div className={style.gamelogo}>
-                <img src={icon} alt="liferoot"/>
-                <img src={liferoot} alt="liferoot"/>
+                <img src={icon} alt="liferoot" style={{width: "15%"}}/>
+                <img src={liferoot} alt="liferoot" style={{width: "100%"}}/>
             </div>
             <Slider>
                 <Slide data={{
