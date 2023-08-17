@@ -13,12 +13,12 @@ export const Home = () => {
             <Slider>
                 <Slide data={{
                         name: "Trikytnuk",
-                        img: slide_2,
+                        img: slide_1,
                         // text: "new game 2023"
                     }}/>
                 <Slide data={{
                         name: "Trikytnuk",
-                        img: slide_1,
+                        img: slide_2,
                         // text: "new game 2023"
                     }}/>
                 <Slide data={{

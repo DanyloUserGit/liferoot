@@ -2,7 +2,7 @@ import style from './../../sassModules/Slider.module.scss';
 import { useEffect, useState } from 'react';
 
 export function Slider ({children}) {
-    const [slide, setSlide] = useState(1);
+    const [slide, setSlide] = useState(2);
     const [on, setOn] = useState(false);
     const [prevPos, setPrevPos] = useState({});
     const slider = {
