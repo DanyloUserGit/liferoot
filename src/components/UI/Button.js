@@ -10,10 +10,7 @@ export const Button = (props) => {
             )
         case 'btn':
             return(
-                <a role='button' onClick={(e)=>{
-                    e.preventDefault();
-                    props.handler
-                    }} className={style.button} style={props.vis ? {display: "none"} : {display: "block"}} type={props.typeE}> 
+                <a role='button' onClick={props.handler} className={style.button} style={props.vis ? {display: "none"} : {display: "block"}} type={props.typeE}> 
                     <span>{props.text}</span>
                 </a>
             );

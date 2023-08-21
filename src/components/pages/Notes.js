@@ -5,8 +5,9 @@ import axios from 'axios';
 
 
 export const Notes = () => {
-    const [data, setData] = useState([]);
     const requiredAddress = "https://trykutnykserver.onrender.com/";
+    //get Posts
+    const [data, setData] = useState([]);
     useEffect(() => {
         (async ()=>{
             const result =  await axios.get(`${requiredAddress}admin/allposts`);
@@ -14,6 +15,7 @@ export const Notes = () => {
             setData(result.data);
         })();
     }, [])
+    
     return (
         <div className={style.page}> 
             <div className={style.lastNews}>

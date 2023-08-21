@@ -64,14 +64,15 @@ export const Posts = () => {
                 <span className={style.label}>Load preview</span>
                 <Input type="file" name="file"/>
                 <span className={style.label} style={{margin: "0 10px"}}>Date: {` ${date}`} </span>
-                <Button text="Create" type="btn" typeE = "submit" handler={()=>{
+                <Button text="Create" type="btn" typeE = "submit" handler={(e)=>{
+                    e.preventDefault();
                     const formData = new FormData(document.getElementById("form"));
                     formData.append('date', date);
                     formData.append('url', `/${Header}`);
                     http.newPost(
                         formData
                     );
-                    document.location.reload();
+                    // document.location.reload();
                 }}/>
             </form>
         </div>
