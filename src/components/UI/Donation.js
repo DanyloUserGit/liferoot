@@ -2,17 +2,17 @@ import style from './../../sassModules/Donation.module.scss';
 import mono from './../../media/monobank.jpeg';
 import payPal from './../../media/paypal.png';
 import patreon from './../../media/Patreon.png';
+import { useState, useEffect } from 'react';
 
 export const Donation = (props) => {
     if(!props.patreon){ return(
         <div className={style.wrapper} style={props.style}>
             <div className={style.content}>
-                <span>{props.value} $</span><br/>
                 <span>{props.text}</span>
             </div>
             <div className={style.container}>
-                <PaymentButton  value={props.value} handler={props.handler}/>
-                <PaymentButton type="paypal" value={props.value} handler={props.handler}/>
+                <PaymentButton handler={props.handler}/>
+                <PaymentButton type="paypal" handler={props.handler}/>
             </div>
         </div>
     );}else{
@@ -27,6 +27,17 @@ export const Donation = (props) => {
         </div>
         );
     }
+}
+export const PaymentInput = (props) =>{
+    const [error, setError] = useState(false);
+    useEffect(() => {
+        if(props.amount < 1 || props.amount > 10000){
+            setError(true);
+        }
+    }, [])
+    return(
+        <input type='number' value={props.amount} className={error ? `${style.error} ${style.input}` : style.input} onChange={props.handler} min={1} max={10000}/>
+    );
 }
 export const PaymentButton = (props) => {
         switch(props.type){

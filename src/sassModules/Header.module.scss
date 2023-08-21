@@ -1,5 +1,4 @@
 @import './variables.scss';
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&display=swap');
 
 .header{
     width: 85%;
@@ -12,6 +11,8 @@
     justify-content: space-around;
     position: relative;
     z-index: 2;
+    font-family: $font;
+
 }
 .header__menu{
     display: flex;
@@ -28,13 +29,12 @@
 .link{
     text-decoration: none;
     color: $white;
-    font-family: $font;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
     transition:cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.34s;
 }.link:hover{
-    text-shadow: 1px 1px 30px $white;
+    text-shadow: 2px 2px 20px $pink;
 }
 .burger__menu{
     display: none;
