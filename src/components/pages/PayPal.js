@@ -8,9 +8,6 @@ export const PayPalBTN = (props) => {
     const render = useRef(true);
     const [on, setOn] = useState(false);
     const [amount, setAmount] = useState(1);
-    const onchangeState = () => {
-        setAmount(amount);
-    }
     useEffect(()=>{
         if(render.current){
             window.paypal.Buttons(
@@ -23,7 +20,7 @@ export const PayPalBTN = (props) => {
                                     description: `Donation: ${amount}, Type: ${props.text}`,
                                     amount: {
                                         currency_code: "USD",
-                                        value: ()=>onchangeState
+                                        value: amount
                                     }
                                 }
                             ],
