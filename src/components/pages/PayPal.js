@@ -8,6 +8,9 @@ export const PayPalBTN = (props) => {
     const render = useRef(true);
     const [on, setOn] = useState(false);
     const [amount, setAmount] = useState(1);
+    useEffect(() => {
+        console.log(amount)
+    },[amount])
     useEffect(()=>{
         if(render.current){
             window.paypal.Buttons(
