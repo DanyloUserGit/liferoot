@@ -53,7 +53,7 @@ export const PayPalBTN = (props) => {
                     }if(amount === 0 || amount === "" || amount === "-"){
                         setAmount(1);
                     }
-                    // render.current = true;
+                    render.current = true;
                 }}/>
                 {/* <Button type="btn" text="Donate" handler={()=>{
                         setOn(true);
