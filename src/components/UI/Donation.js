@@ -33,6 +33,8 @@ export const PaymentInput = (props) =>{
     useEffect(() => {
         if(props.amount < 1 || props.amount > 10000){
             setError(true);
+        }if(props.amount === 0 || props.amount === "-"){
+            props.amount = 1;
         }
     }, [])
     return(

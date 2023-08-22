@@ -43,7 +43,7 @@ export const PayPalBTN = (props) => {
             ).render(paypal.current);
             render.current = false;
         }
-    }, [amount])
+    }, [])
         return(
             <div className={style.wrapper}>
                 <PaymentInput amount={amount} handler={(e)=>{
