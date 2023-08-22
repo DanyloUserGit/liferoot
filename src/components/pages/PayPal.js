@@ -50,7 +50,10 @@ export const PayPalBTN = (props) => {
                     setAmount(e.target.value);
                     if(amount > 10000){
                         setAmount(10000);
+                    }if(amount === 0 || amount === "" || amount === "-"){
+                        setAmount(1);
                     }
+                    // render.current = true;
                 }}/>
                 {/* <Button type="btn" text="Donate" handler={()=>{
                         setOn(true);
