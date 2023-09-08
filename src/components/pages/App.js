@@ -13,6 +13,7 @@ import { Support } from './Support.js';
 import{useState, useEffect} from 'react';
 import {Navigate} from 'react-router-dom';
 import { PagesAdm } from '../../PatchPages/components/pages/main.js';
+import { PageNotFound } from './404.js';
 const http = new Http();
 
 // 5jxeta6gnq
@@ -34,6 +35,7 @@ function App() {
       <Header/>
         <Routes>
           <Route exact path='/' element={<Home />} />
+          <Route path='/*' element={<PageNotFound />} />
           <Route exact path='/download' element={<Download />} />
           <Route exact path='/patches' element={<Notes />} />
           <Route exact path='/support' element={<Support />}/>
