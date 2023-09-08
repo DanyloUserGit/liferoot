@@ -1,0 +1,23 @@
+@import './../../sassModules/variables.scss';
+
+.label{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.sectioncontent img{
+    width: 100px;
+    height: 100px;
+}
+.sectioncontent{
+    padding: 5%;
+    max-width: 100px;
+    border: dashed $white;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.section{
+    margin: 5% auto;
+    width: 200px;
+    height: auto;
+}

@@ -4,13 +4,40 @@ import { PaymentInput } from '../UI/Donation';
 import { Button } from '../UI/Button';
 
 export const PayPalBTN = (props) => {
+    const [donate, setDonate] = useState(false);
+    const [amount, setAmount] = useState(1);
+
+    if(donate === false){
+        return(
+            <div className={style.wrapper}>
+                <PaymentInput amount={amount} handler={(e)=>{
+                    setAmount(e.target.value);
+                    if(amount > 10000){
+                        setAmount(10000);
+                    }if(amount === 0 || amount === "" || amount === "-"){
+                        setAmount(1);
+                    }
+                    console.log(amount);
+                    
+                }}/>
+
+                <Button type="btn" text="Donate" handler={()=>{
+                        setDonate(true);
+                    }}/>
+            </div>
+        );
+    }else{
+        return(
+            <div className={style.wrapper}>
+                <Donate amount={amount}/>
+            </div>
+        )
+    }
+}
+
+export const Donate = (props) => {
     const paypal = useRef();
     const render = useRef(true);
-    const [on, setOn] = useState(false);
-    const [amount, setAmount] = useState(1);
-    useEffect(() => {
-        console.log(amount)
-    },[amount])
     useEffect(()=>{
         if(render.current){
             window.paypal.Buttons(
@@ -20,10 +47,10 @@ export const PayPalBTN = (props) => {
                             intent: "CAPTURE",
                             purchase_units: [
                                 {
-                                    description: `Donation: ${amount}, Type: ${props.text}`,
+                                    description: `Donation: ${props.amount}, Type: ${props.text}`,
                                     amount: {
                                         currency_code: "USD",
-                                        value: amount
+                                        value: props.amount
                                     }
                                 }
                             ],
@@ -43,22 +70,8 @@ export const PayPalBTN = (props) => {
             ).render(paypal.current);
             render.current = false;
         }
-    }, [])
-        return(
-            <div className={style.wrapper}>
-                <PaymentInput amount={amount} handler={(e)=>{
-                    setAmount(e.target.value);
-                    if(amount > 10000){
-                        setAmount(10000);
-                    }if(amount === 0 || amount === "" || amount === "-"){
-                        setAmount(1);
-                    }
-                    render.current = true;
-                }}/>
-                {/* <Button type="btn" text="Donate" handler={()=>{
-                        setOn(true);
-                    }}/> */}
-                <div ref={paypal}></div>
-            </div>
-        );
-    }
+    }, [props.amount])
+    return(
+        <div ref={paypal}></div>
+    )
+}

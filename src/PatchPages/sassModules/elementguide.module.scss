@@ -1,0 +1,53 @@
+@import './../../sassModules/variables.scss';
+// 5jxeta6gnq
+.element{
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 500;
+}
+.label{
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+li > .text{
+    color: $lightBlue; 
+    text-transform:capitalize;
+}
+.possibleVariant{
+    padding: 10px;
+    background-color: $darkBlue;
+    border-radius: 10%;
+}
+.dark{
+    background-color: $maxdark;
+    color: $maxdark;
+}
+.white{
+    background-color: $white;
+    color: $white;
+}
+.blue{
+    background-color: $lightBlue;
+    color: $lightBlue;
+}
+.pink{
+    background-color: $pink;
+    color: $pink;
+}
+.gray{
+    background-color: $gray;
+    color: $gray;
+}
+.possibleVariant{
+    margin: 5px 20px;
+}
+.text{
+    margin: 5px 10px;
+
+    text-transform: uppercase;
+    background: none;
+}
+.dotted::before{content: "⚫";}
+.number::before{content: "1. ";}
+.georgian::before{content: "\1F44D";}

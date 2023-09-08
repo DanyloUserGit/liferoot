@@ -18,6 +18,7 @@ export const Admin = () => {
             {loadHome === true ? <Navigate to="/"/> : ""}
             <ul className={style.topNavbar}>
                 <li><Link to="posts">posts</Link></li>
+                <li><Link to="pages">pages</Link></li>
             </ul>
             <Outlet />
         </div>

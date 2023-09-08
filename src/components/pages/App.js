@@ -12,6 +12,7 @@ import { useLocation } from 'react-router-dom';
 import { Support } from './Support.js';
 import{useState, useEffect} from 'react';
 import {Navigate} from 'react-router-dom';
+import { PagesAdm } from '../../PatchPages/components/pages/main.js';
 const http = new Http();
 
 // 5jxeta6gnq
@@ -38,6 +39,7 @@ function App() {
           <Route exact path='/support' element={<Support />}/>
           <Route exact path='/admin' element={<Admin />}>
             <Route exact path='posts' element={<Posts />}/>
+            <Route exact path='pages' element={<PagesAdm />}/>
           </Route>
         </Routes>
       <Footer />

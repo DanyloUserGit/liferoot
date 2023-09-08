@@ -1,0 +1,45 @@
+@import './../../sassModules/variables.scss';
+
+.page{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: $white;
+    font-family: $font;
+}
+.guideElements{
+    margin: 5px 20px;
+}
+.Guidemenu{
+    background-color: $maxdarkLight;
+    width: 100%;
+    height: 100%;
+}
+.field{
+    width: 100%;
+    min-height: 100%;
+    background: url('./../../media/bg.svg');
+    background: linear-gradient(-155deg, $mindark, $maxdark 80%);
+    display: flex;
+    flex-direction: column;
+}
+.main{
+    flex: 1 1 auto;
+    width: 85%;
+    height: auto;
+    margin: 5% auto;
+    // background-color: red;
+}
+.label{
+    text-transform: uppercase;
+    font-family: $font;
+    font-size: 26px;
+    font-weight: thin;
+    font-style: italic;
+    color: $lightBlue;
+}
+// 5jxeta6gnq

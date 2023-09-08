@@ -4,9 +4,9 @@ import telegram from './../../media/tg.svg';
 import tiktok from './../../media/tiktok.svg';
 import instagram from './../../media/instagram.svg';
 
-export const Footer = () => {
+export const Footer = (props) => {
     return (
-        <div className={style.footer}>
+        <div className={style.footer} style={props.style}>
             <div className={style.logo__wrapper}>
                 <img src={logo} alt='Trikutnyk' />
             </div>
