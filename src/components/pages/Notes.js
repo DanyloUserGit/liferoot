@@ -64,7 +64,7 @@ export const Notes = () => {
                                         text={el.description}
                                         date={el.date}
                                         link={el.url}
-                                        img={`${requiredAddress}${el.img}`}
+                                        img={el.img}
                                     />
                                 </li>
                             );

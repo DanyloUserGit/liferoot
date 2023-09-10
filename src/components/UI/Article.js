@@ -10,7 +10,7 @@ export const Article = (props) => {
         case 'admin':
             return(
                 <div className={style.article}>
-                    <img alt='preview' src={requiredAddress + props.img}/>
+                    <img alt='preview' src={props.img}/>
                     <ul>
                         <li><h2 className={style.header}>{props.header}</h2></li>
                         <li><span className={style.description}>{props.text}</span></li>
@@ -30,7 +30,7 @@ export const Article = (props) => {
             default:
                 return (
                     <div className={style.article}>
-                        <img alt='preview' src={requiredAddress + props.img}/>
+                        <img alt='preview' src={props.img}/>
                         <ul>
                             <li><h2 className={style.header}>{props.header}</h2></li>
                             <li><span className={style.description}>{props.text}</span></li>
