@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/liferoot/static/css/main.3e67bc98.css",
-    "main.js": "/liferoot/static/js/main.a7da0219.js",
+    "main.css": "/liferoot/static/css/main.2b0b6142.css",
+    "main.js": "/liferoot/static/js/main.f9f575f9.js",
     "static/media/bg.svg": "/liferoot/static/media/bg.f35f56d2d2dac26ae404.svg",
     "static/media/liferoot.png": "/liferoot/static/media/liferoot.5f6ff0dd0a61fe8208e9.png",
     "static/media/slide_2.png": "/liferoot/static/media/slide_2.91eb43cc3d28bbd7c322.png",
@@ -15,11 +15,11 @@
     "static/media/tiktok.svg": "/liferoot/static/media/tiktok.529f56e0dd9f9c9c163e1b3024af5e53.svg",
     "static/media/tg.svg": "/liferoot/static/media/tg.787bede6398c78fbf1ef622dc6ec998d.svg",
     "index.html": "/liferoot/index.html",
-    "main.3e67bc98.css.map": "/liferoot/static/css/main.3e67bc98.css.map",
-    "main.a7da0219.js.map": "/liferoot/static/js/main.a7da0219.js.map"
+    "main.2b0b6142.css.map": "/liferoot/static/css/main.2b0b6142.css.map",
+    "main.f9f575f9.js.map": "/liferoot/static/js/main.f9f575f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e67bc98.css",
-    "static/js/main.a7da0219.js"
+    "static/css/main.2b0b6142.css",
+    "static/js/main.f9f575f9.js"
   ]
 }
