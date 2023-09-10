@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.wrapper{
+    width: 0%;
+    height: 10%;
+    margin: 20px auto;
+}
+.round{
+    padding: 4px;
+    border-radius: 100%;
+    background:linear-gradient($lightBlue, $white, $pink, $darkWhite);
+    max-width: 54px;
+    animation: rotate 1s reverse infinite;
+}
+.child{
+    border: 3px solid $maxdark;
+}
+.center{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.label{
+    color: $darkWhite;
+    font-size: 20px;
+    margin: 10px 0;
+}
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+    
+}
