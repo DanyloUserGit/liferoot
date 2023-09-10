@@ -3,7 +3,7 @@ import axios from 'axios'
 const requiredAddress = "https://trykutnykserver.onrender.com/";
 export class Http{
     async newPost (data) {
-        await axios.post(`${requiredAddress}admin/post`, {data:data}, {
+        await axios.post(`${requiredAddress}admin/post`, data, {
             headers: {
                 "content-type":"mulpipart/form-data"
             }
