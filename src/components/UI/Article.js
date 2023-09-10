@@ -1,6 +1,7 @@
 import style from './../../sassModules/Article.module.scss';
 import { Button } from './Button';
 import { Http } from '../../http';
+import liferoot from './../../media/slide_2.png';
 const http = new Http();
 
 export const Article = (props) => {
@@ -29,7 +30,7 @@ export const Article = (props) => {
             default:
                 return (
                     <div className={style.article}>
-                        <img alt='preview' src={props.img}/>
+                        <img alt='preview' src={requiredAddress + props.img}/>
                         <ul>
                             <li><h2 className={style.header}>{props.header}</h2></li>
                             <li><span className={style.description}>{props.text}</span></li>

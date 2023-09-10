@@ -2,16 +2,24 @@
 
 .article{
     display: flex;
-    margin: 10px 0;
+    // flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
     color: $lightGray;
+    // background-color: $imagescolor;
+
 }
 .article img{
     width: 250px;
+    min-height: 100px;
+    max-height: 250px;
     height: auto;
     background-color: $imagescolor;
+    margin: 0 10px;
 }
 .article ul{
     margin: 0 10px;
+    max-width: 90%;
 }
 .moreLink{
     color: $white;
@@ -27,8 +35,23 @@
 .description{
     font-size: 14px;
 }
-// @media screen and (max-width:1430px){
-//     .recomendationImage{
-//         width: 100%;
+.date{
+    color:$darkBlue;
+}
+// @media screen and (max-width:940px){
+//     .article{
+//         flex-direction: column;
 //     }
 // }
+@media screen and (max-width:940px){
+    .article{
+        width: 100%;
+        flex-direction: column;
+    }
+    .article img{
+        width: 90%;
+    }
+    .article ul{
+        margin: 20px 10px;
+    }
+}
