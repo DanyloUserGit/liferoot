@@ -1,8 +1,7 @@
-import {Header} from '../UI/Header.js';
+import { LifeRoot } from './LifeRoot.js';
 import style from '../../sassModules/main.module.scss';
 import { Download } from './Download.js';
 import { Home } from './Home.js';
-import { Footer } from '../UI/Footer.js';
 import { Routes, Route } from 'react-router-dom';
 import { Notes } from './Notes.js';
 import { Admin } from './Admin.js';
@@ -14,6 +13,9 @@ import{useState, useEffect} from 'react';
 import {Navigate} from 'react-router-dom';
 import { PagesAdm } from '../../PatchPages/components/pages/main.js';
 import { PageNotFound } from './404.js';
+import { Trykutnyk } from '../Trykutnyk/Trykutnyk.js';
+import { TrykutnykHome } from '../Trykutnyk/TrykutnykHome.js';
+import { About } from '../Trykutnyk/About.js';
 const http = new Http();
 
 // 5jxeta6gnq
@@ -21,6 +23,7 @@ const http = new Http();
 function App() {
   const location = useLocation();
   const [load, setLoad] = useState(false);
+  const [home, setHome] = useState(false);
   useEffect(() => {
     (()=>{
       if(location.pathname === "/LifeRoot.bat"){
@@ -28,23 +31,37 @@ function App() {
       }
     })()
   }, [])
+  useEffect(() => {
+    (()=>{
+      if(location.pathname === "/"){
+        setHome(true);
+      }
+    })()
+  }, [])
   
   return (
     <div className={style.page}>
-      {load === true ? <Navigate to="/"/> : ""}
-      <Header/>
+      {load === true ? <Navigate to="home"/> : ""}
+      {location.pathname === "/liferoot/" ? <Navigate to="/liferoot/Home"/> : ""}
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/*' element={<PageNotFound />} />
-          <Route exact path='/download' element={<Download />} />
-          <Route exact path='/patches' element={<Notes />} />
-          <Route exact path='/support' element={<Support />}/>
+          <Route exact path='/' element={<Trykutnyk />}>
+            <Route exact path='/' element={<TrykutnykHome />} />
+            <Route exact path='about' element={<About />} />
+            <Route exact path='support' element={<Support />}/>
+            <Route exact path='news' element={<Notes />}/>
+          </Route>
+          <Route exact path='/liferoot' element={<LifeRoot />}>
+            <Route exact path='home' element={<Home />} />
+            <Route exact path='download' element={<Download />} />
+            <Route exact path='patches' element={<Notes />} />
+            <Route exact path='support' element={<Support />}/>
+          </Route>
           <Route exact path='/admin' element={<Admin />}>
             <Route exact path='posts' element={<Posts />}/>
             <Route exact path='pages' element={<PagesAdm />}/>
           </Route>
+          <Route path='/*' element={<PageNotFound />} />
         </Routes>
-      <Footer />
     </div>
   );
 }

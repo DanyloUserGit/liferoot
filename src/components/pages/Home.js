@@ -1,4 +1,5 @@
 import { Slide, Slider } from '../UI/Slider';
+import { Link, Outlet } from 'react-router-dom';
 import style from './../../sassModules/Home.module.scss';
 import slide_1 from './../../media/slide_1.png';
 import slide_2 from './../../media/slide_2.png';
@@ -32,7 +33,7 @@ export const Home = () => {
                     }}/>
             </Slider>
             <div className={style.longText}>
-                    <span className={style.heading}>ABOUT GAME</span>
+                    <span className={style.heading}>ABOUT THE GAME</span>
                     <ul className={style.textList}>
                         <li>
                             <span>

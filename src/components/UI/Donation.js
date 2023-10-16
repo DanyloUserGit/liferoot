@@ -50,7 +50,7 @@ export const PaymentButton = (props) => {
             case "patreon":
                 return(
                     <div className={style.btn} onClick={props.handler}>
-                        <a href='https://kick.com/'><img src={patreon} className={style.img}/></a>
+                        <a href='https://www.kickstarter.com/'><img src={patreon} className={style.img}/></a>
                     </div>
                 );
             default:

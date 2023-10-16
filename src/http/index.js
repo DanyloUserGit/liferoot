@@ -7,7 +7,11 @@ export class Http{
             // headers: {
             //     "content-type":"mulpipart/form-data"
             // }
-        });
+        }).then(
+            (res)=>{
+                window.location = "/#/patches";
+            }
+        );
     }
     async deletePost (data) {
         await axios.delete(`${requiredAddress}admin/deletepost`, {data:data});

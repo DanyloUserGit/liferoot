@@ -1,12 +1,9 @@
 @import './variables.scss';
 
 .wrapper{
-    width: 33.3%;
+    width: 30vw;
     height: auto;
     padding: 20px 0;
-    background-color: $maxdark;
-    border-radius: 5% 5% 20% 20%;
-    border-bottom: 13.5px solid $imagescolor;
     color: $white;
     font-family: $font;
     text-transform: uppercase;
@@ -52,9 +49,13 @@
         font-size: 15px;
     }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .wrapper{
-        margin: 10px 0;
-        width: 100%;
+        width: 40vw;
+    }
+}
+@media screen and (max-width: 400px){
+    .wrapper{
+        width: 50vw;
     }
 }

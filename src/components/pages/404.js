@@ -1,4 +1,6 @@
 import style from './../../sassModules/404.module.scss';
+import { Footer } from '../UI/Footer';
+import { Header } from '../UI/Header';
 export const PageNotFound = () => {
     return(
         <div className={style.wrapper}>
@@ -8,6 +10,7 @@ export const PageNotFound = () => {
                 <span className={style.text}>Sorry, we were unable to find this page</span>
                 <div className={style.stickers}>🚨🚨🚨</div>
             </p>
+            <Footer />
         </div>
     )
 }

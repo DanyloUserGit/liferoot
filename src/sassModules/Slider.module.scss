@@ -3,6 +3,8 @@
 .slider{
     width: 100%;
     height: 100%;
+    position: relative;
+    margin: 10% 0;
 }
 .wrapper{
     width: 100%;
@@ -39,22 +41,70 @@
 }
 .indicators{
     z-index: 4;
-    margin: 0px auto;
-    width: 150px;
+    width: 45%;
     height: 20px;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    left: 40%;
+    top: 85%;
 }
 .indicator{
-    width: 50px;
+    width: 15%;
     height: 10px;
     border-radius: 5px;
     border: solid $darkGray 1px;
     background-color: $darkGray;
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 .indicator.active{
-    background-color: $lightBlue;
+    background-color: $darkWhite;
+    height: 15px;
+    margin: 0 5px;
+}
+.buttons{
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 100%;
+}
+.left, .right{
+    width: 5%;
+    height: 5%;
+    background-color: $mindark; 
+    border-radius: 80%;
+}.left:hover, .right:hover{
+    background-color: $buttonWhite;
+    cursor: pointer;
+}.left img, .right img{
+    width: 100%;
+    height: auto;
+}
+.left{
+    transform: rotate(-90deg);
+}.right{
+    transform: rotate(90deg);
+}
+@media screen and (max-width: 800px){
+    .left, .right{
+        width: 10%;
+        height: 10%;
+    }
+}
+@media screen and (max-width:640px){
+    .indicator{
+        width: 20%;
+    }
+    .indicators{
+        top: 80%;
+    }
+    .left, .right{
+        width:15%;
+        height: 15%;
+    }
 }
 // @keyframes slidePage{
 //     0%{

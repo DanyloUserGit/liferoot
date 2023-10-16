@@ -1,17 +1,20 @@
 @import './variables.scss';
 
 .header{
-    width: 85%;
+    width: 90%;
     height: 72px;
-    margin: 21px auto;
+    margin:0 auto;
     border-radius: $radius;
     background-color: $basecolor;
     text-transform: uppercase;
     display: flex;
     justify-content: space-around;
     position: relative;
-    z-index: 2;
+    z-index: 5;
     font-family: $font;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    left: 5%;
 
 }
 .header__menu{
@@ -41,39 +44,22 @@
 }
 .dropdown{
     width: 100%;
+    background-color: $basecolor;
+    border-radius: $radius;
+    margin: 45px 0;
+    box-shadow: 0px 3px 2px $maxdark;
     position: absolute;
-    top: 72px;
-    background-color: $maxdarkLight;
-    padding: 20px 0;
-    opacity: 0;
+    left: 0;
     display: none;
-    transform: translateY(-20px);
 }
-.dropdown ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.dropdown img{
+    max-width: 30%;
 }
-.arrow{
-    border: solid $white;
-    background-color: $maxdarkLight;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 50%;
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    position: absolute;
-    top: -18px;
-}
-.dropdown.active{
-    transform: translateY(0px);
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+ul li:hover > ul{
+    display: initial;
     opacity: 1;
-    display: block;
 }
+
 @media screen and (max-width: 800px){
     .linkSolo{
         display: none;
@@ -88,13 +74,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 15px;
         background: $maxdark;
         transition: transform 0.5s; 
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
     .header__menu.active{
-        padding:40px 0;
+        height: 100vh;
+        width: 100%;
         transform: translateX(0%);
         flex-direction: column;
     }.header__menu.active>li{
@@ -104,7 +90,7 @@
         z-index: 2;
         position: fixed;
         left: 20px;
-        top: 140px;
+        top: 15%;
         z-index: 4;
     }
     .header{

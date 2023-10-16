@@ -26,6 +26,7 @@ export const Support = ({children}) => {
                             handler(15, "Support");
                             setPayment(true);
                                             }}/>
+                            <hr className={style.l}></hr>
                         <Donation value={100} text="our kick" patreon={true}/>
                     </div>
                     <Outlet />

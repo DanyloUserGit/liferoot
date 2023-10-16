@@ -10,7 +10,7 @@ export function Slider ({children}) {
             if(slide === 1){
                 slider.slideToLeft();
             }else{
-                document.getElementById('line').style.margin = `0 0`;
+                document.getElementById('line').style.margin = `0 15%`;
                 setSlide(1);
             }
         },
@@ -18,12 +18,12 @@ export function Slider ({children}) {
             if(slide === 3){
                 slider.slideToRight();
             }else{
-                document.getElementById('line').style.margin = `0 -200%`;
+                document.getElementById('line').style.margin = `0 -195%`;
                 setSlide(3);
             }
         },
         slideToCenter: ()=>{
-            document.getElementById('line').style.margin = `0 -100%`;
+            document.getElementById('line').style.margin = `0 -90%`;
             setSlide(2);
         },
     }
@@ -33,6 +33,22 @@ export function Slider ({children}) {
                 <div className={style.line} id='line' >
                     {children}
                 </div>
+            </div>
+            <div className={style.buttons}>
+                <div className={style.left} onClick={()=>{
+                    if(slide === 3){
+                        slider.slideToCenter();
+                    }else{
+                        slider.slideToRight();
+                    }
+                }}><img width="100" height="100" src="https://img.icons8.com/carbon-copy/100/collapse-arrow.png" alt="collapse-arrow"/></div>
+                <div className={style.right} onClick={()=>{
+                    if(slide === 1){
+                        slider.slideToCenter();
+                    }else{
+                        slider.slideToLeft();
+                    }
+                }}><img width="100" height="100" src="https://img.icons8.com/carbon-copy/100/collapse-arrow.png" alt="collapse-arrow"/></div>
             </div>
             <div className={style.indicators}>
                     <div className={slide === 1 ? `${style.indicator} ${style.active}` : `${style.indicator}`} onClick={(e)=>{

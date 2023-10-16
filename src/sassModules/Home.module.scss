@@ -6,8 +6,6 @@
     color: $lightGray;
     font-size: (calc(14px + 2 * ((100vw - 420px) / 860)));
     font-family:$font;
-}
-.page{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -36,20 +34,15 @@
     color: $lightGray;
 }
 .longText{
-    margin:20% 0 ;
+    margin: 0% 0 ;
 }
 .textSector{
     width: 100%;
+    padding: 12% 0;
 }
 .dList{
     list-style:disc;
 }
 .blue{
     color: $darkBlue;
-}
-
-@media screen and (min-width: 700px){
-    .textSector{
-        margin: -10% 0;
-    }
 }
